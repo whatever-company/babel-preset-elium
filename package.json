@@ -1,6 +1,6 @@
 {
   "name": "@eliumhq/babel-preset-elium",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Babel preset used by Elium",
   "repository": {
     "type": "git",
@@ -15,7 +15,7 @@
     "test.js"
   ],
   "scripts": {
-		"format": "prettier --write '**/*.{js,jsx,md,json,css}'",
+    "format": "prettier --write '**/*.{js,jsx,md,json,css}'",
     "release": "standard-version"
   },
   "dependencies": {
