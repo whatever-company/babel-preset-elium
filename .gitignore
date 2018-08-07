@@ -1,0 +1,8 @@
+.DS_STORE
+*.log
+node_modules
+.babelcache
+.env
+.cache
+.npm
+.idea/
