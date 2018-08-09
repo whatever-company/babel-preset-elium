@@ -124,7 +124,15 @@ module.exports = function(api, opts, env) {
 			],
 			isEnvTest &&
 				// Transform dynamic import to require
-				require('babel-plugin-transform-dynamic-import').default
+				require('babel-plugin-transform-dynamic-import').default,
+			isEnvTest &&
+				// Support require.context in tests
+				// You still need to setup the hook when running tests with
+				//
+				//   const registerRequireContextHook = require('babel-plugin-require-context-hook/register')
+				//   registerRequireContextHook()
+				//
+				require('babel-pluginrequire-context-hook').default
 		].filter(Boolean)
 	}
 }

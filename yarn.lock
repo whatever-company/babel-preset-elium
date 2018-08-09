@@ -257,7 +257,7 @@
     "@babel/helper-plugin-utils" "7.0.0-beta.56"
     "@babel/plugin-syntax-numeric-separator" "7.0.0-beta.56"
 
-"@babel/plugin-proposal-object-rest-spread@7.0.0-beta.56", "@babel/plugin-proposal-object-rest-spread@^7.0.0-beta.56":
+"@babel/plugin-proposal-object-rest-spread@7.0.0-beta.56":
   version "7.0.0-beta.56"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-object-rest-spread/-/plugin-proposal-object-rest-spread-7.0.0-beta.56.tgz#5a8b8c89e94155d766baacdf8e50ea7dead96741"
   dependencies:
@@ -308,7 +308,7 @@
   version "7.0.0-beta.34"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-dynamic-import/-/plugin-syntax-dynamic-import-7.0.0-beta.34.tgz#05b1e58e4c3f412edb28aa0346c14c5f13c41b46"
 
-"@babel/plugin-syntax-dynamic-import@^7.0.0-beta.56":
+"@babel/plugin-syntax-dynamic-import@7.0.0-beta.56":
   version "7.0.0-beta.56"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-dynamic-import/-/plugin-syntax-dynamic-import-7.0.0-beta.56.tgz#598a311ffc8821b4f4683c4e52b62b896e2d943c"
   dependencies:
@@ -414,7 +414,7 @@
   dependencies:
     "@babel/helper-plugin-utils" "7.0.0-beta.56"
 
-"@babel/plugin-transform-destructuring@7.0.0-beta.56", "@babel/plugin-transform-destructuring@^7.0.0-beta.56":
+"@babel/plugin-transform-destructuring@7.0.0-beta.56":
   version "7.0.0-beta.56"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-destructuring/-/plugin-transform-destructuring-7.0.0-beta.56.tgz#41ab43ad5a885b73cc44192948109076a95c2bf0"
   dependencies:
@@ -736,6 +736,10 @@ arrify@^1.0.1:
 async@^1.4.0:
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/async/-/async-1.5.2.tgz#ec6a61ae56480c0c3cb241c95618e20892f9672a"
+
+babel-plugin-require-context-hook@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-require-context-hook/-/babel-plugin-require-context-hook-1.0.0.tgz#3f0e7cce87c338f53639b948632fd4e73834632d"
 
 babel-plugin-transform-dynamic-import@2.0.0:
   version "2.0.0"
