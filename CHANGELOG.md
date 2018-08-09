@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.0"></a>
+# [0.3.0](http://gitlab.com/elium/product/babel-preset-elium/compare/v0.2.1...v0.3.0) (2018-08-09)
+
+
+### Features
+
+* Disable  setting on preset-env ([513786f](http://gitlab.com/elium/product/babel-preset-elium/commit/513786f))
+
+
+
 <a name="0.2.1"></a>
 ## [0.2.1](http://gitlab.com/elium/product/babel-preset-elium/compare/v0.2.0...v0.2.1) (2018-08-09)
 
