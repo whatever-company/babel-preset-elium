@@ -41,10 +41,6 @@ module.exports = function(api, opts, env) {
 					useBuiltIns: 'entry',
 					// Do not transform modules to CJS by defaylt
 					modules: opts.modules || false,
-					// enable "loose" option for bundled plugins
-					// https://github.com/babel/babel/issues/8401#issuecomment-408918614
-					// https://babeljs.io/docs/en/next/v7-migration#spec-compliancy
-					loose: true,
 					targets: opts.targets
 				}
 			],
