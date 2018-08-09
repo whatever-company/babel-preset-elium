@@ -132,7 +132,7 @@ module.exports = function(api, opts, env) {
 				//   const registerRequireContextHook = require('babel-plugin-require-context-hook/register')
 				//   registerRequireContextHook()
 				//
-				require('babel-pluginrequire-context-hook').default
+				require('babel-plugin-require-context-hook').default
 		].filter(Boolean)
 	}
 }
