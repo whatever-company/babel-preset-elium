@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.4.0"></a>
+# [0.4.0](http://gitlab.com/elium/product/babel-preset-elium/compare/v0.3.0...v0.4.0) (2018-08-10)
+
+
+### Features
+
+* Upgrade to babel-7.0.0-rc.1 ([c65380b](http://gitlab.com/elium/product/babel-preset-elium/commit/c65380b))
+
+
+
 <a name="0.3.0"></a>
 # [0.3.0](http://gitlab.com/elium/product/babel-preset-elium/compare/v0.2.1...v0.3.0) (2018-08-09)
 
