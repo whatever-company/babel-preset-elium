@@ -57,6 +57,7 @@ module.exports = function(api, opts, env) {
 			]
 		].filter(Boolean),
 		plugins: [
+			require('@babel/plugin-transform-runtime').default,
 			// Necessary to include regardless of the environment because
 			// in practice some other transforms (such as object-rest-spread)
 			// don't work without it: https://github.com/babel/babel/issues/7215
@@ -83,14 +84,6 @@ module.exports = function(api, opts, env) {
 				require('@babel/plugin-proposal-object-rest-spread').default,
 				{
 					useBuiltIns: true
-				}
-			],
-			// Polyfills the runtime needed for async/await and generators
-			[
-				require('@babel/plugin-transform-runtime').default,
-				{
-					helpers: false,
-					regenerator: true
 				}
 			],
 			require('@babel/plugin-syntax-dynamic-import'), // stage 3
