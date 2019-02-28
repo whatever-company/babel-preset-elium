@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.11](http://gitlab.com/elium/product/babel-preset-elium/compare/v0.4.10...v0.4.11) (2019-02-28)
+
+
+
 <a name="0.4.10"></a>
 ## [0.4.10](http://gitlab.com/elium/product/babel-preset-elium/compare/v0.4.9...v0.4.10) (2019-02-06)
 
