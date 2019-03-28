@@ -39,6 +39,7 @@ module.exports = function(api, opts, env) {
 					// This is probably a fine default to help trim down bundles when
 					// end-users inevitably import '@babel/polyfill'.
 					useBuiltIns: 'entry',
+					corejs: 3,
 					// Do not transform modules to CJS by defaylt
 					modules: opts.modules || false,
 					targets: opts.targets
@@ -57,7 +58,12 @@ module.exports = function(api, opts, env) {
 			]
 		].filter(Boolean),
 		plugins: [
-			require('@babel/plugin-transform-runtime').default,
+			[
+				require('@babel/plugin-transform-runtime').default,
+				{
+					corejs: 3
+				}
+			],
 			// Necessary to include regardless of the environment because
 			// in practice some other transforms (such as object-rest-spread)
 			// don't work without it: https://github.com/babel/babel/issues/7215
