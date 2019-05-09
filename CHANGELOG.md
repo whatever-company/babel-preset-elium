@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.5.0](http://gitlab.com/elium/product/babel-preset-elium/compare/v0.4.14...v0.5.0) (2019-05-09)
+
+
+### Features
+
+* update settings from create-react-app ([3463e88](http://gitlab.com/elium/product/babel-preset-elium/commit/3463e88))
+
+
+
 ## [0.4.14](http://gitlab.com/elium/product/babel-preset-elium/compare/v0.4.13...v0.4.14) (2019-05-03)
 
 
