@@ -33,16 +33,15 @@ module.exports = function(api, opts, env) {
 				// Latest stable ECMAScript features
 				require('@babel/preset-env').default,
 				{
-					// `entry` transforms `@babel/polyfill` into individual requires for
-					// the targeted browsers. This is safer than `usage` which performs
-					// static code analysis to determine what's required.
-					// This is probably a fine default to help trim down bundles when
-					// end-users inevitably import '@babel/polyfill'.
+					// Allow importing core-js in entrypoint and use browserlist to select polyfills
 					useBuiltIns: 'entry',
 					corejs: 3,
 					// Do not transform modules to CJS by defaylt
 					modules: opts.modules || false,
-					targets: opts.targets
+					targets: opts.targets,
+					// Exclude transforms that make all code slower
+					// https://github.com/facebook/create-react-app/pull/5278
+					exclude: ['transform-typeof-symbol']
 				}
 			],
 			[
@@ -61,13 +60,32 @@ module.exports = function(api, opts, env) {
 			[
 				require('@babel/plugin-transform-runtime').default,
 				{
-					corejs: 3
+					corejs: false
 				}
 			],
 			// Necessary to include regardless of the environment because
 			// in practice some other transforms (such as object-rest-spread)
 			// don't work without it: https://github.com/babel/babel/issues/7215
-			require('@babel/plugin-transform-destructuring').default,
+			[
+				require('@babel/plugin-transform-destructuring').default,
+				{
+					// Use loose mode for performance:
+					// https://github.com/facebook/create-react-app/issues/5602
+					loose: false,
+					selectiveLoose: [
+						'useState',
+						'useEffect',
+						'useContext',
+						'useReducer',
+						'useCallback',
+						'useMemo',
+						'useRef',
+						'useImperativeHandle',
+						'useLayoutEffect',
+						'useDebugValue',
+					]
+				}
+			],
 			// must be above class properties
 			[
 				require('@babel/plugin-proposal-decorators'), // stage 2
