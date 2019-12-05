@@ -117,6 +117,8 @@ module.exports = function(api, opts, env) {
 			require('@babel/plugin-proposal-export-namespace-from'), // stage 2
 			require('@babel/plugin-proposal-numeric-separator'), // stage 2
 			require('@babel/plugin-proposal-throw-expressions'), // stage 2
+			require('@babel/plugin-proposal-nullish-coalescing-operator'), // stage 3
+			require('@babel/plugin-proposal-optional-chaining'), // stage 4
 			// require('@babel/plugin-transform-react-display-name'),
 			isEnvProduction && [
 				// Remove PropTypes from production build
