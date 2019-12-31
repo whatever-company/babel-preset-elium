@@ -112,6 +112,7 @@ module.exports = function(api, opts, env) {
 			],
 			require('@babel/plugin-syntax-dynamic-import'), // stage 3
 			require('@babel/plugin-syntax-import-meta'), // stage 3
+			require('@babel/syntax-trailing-function-commas'), // stage 4
 			require('@babel/plugin-proposal-json-strings'), // stage 3
 			require('@babel/plugin-proposal-function-sent'), // stage 2
 			require('@babel/plugin-proposal-export-namespace-from'), // stage 2
