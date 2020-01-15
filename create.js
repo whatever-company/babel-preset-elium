@@ -15,7 +15,7 @@ module.exports = function(api, opts, env) {
 				'`BABEL_ENV` environment variables. Valid values are "development", ' +
 				'"test", and "production". Instead, received: ' +
 				JSON.stringify(env) +
-				'.'
+				'.',
 		)
 	}
 
@@ -25,9 +25,9 @@ module.exports = function(api, opts, env) {
 				require('@babel/preset-env').default,
 				{
 					targets: {
-						node: 'current'
-					}
-				}
+						node: 'current',
+					},
+				},
 			],
 			(isEnvProduction || isEnvDevelopment) && [
 				// Latest stable ECMAScript features
@@ -41,8 +41,8 @@ module.exports = function(api, opts, env) {
 					targets: opts.targets,
 					// Exclude transforms that make all code slower
 					// https://github.com/facebook/create-react-app/pull/5278
-					exclude: ['transform-typeof-symbol']
-				}
+					exclude: ['transform-typeof-symbol'],
+				},
 			],
 			[
 				require('@babel/preset-react').default,
@@ -52,16 +52,16 @@ module.exports = function(api, opts, env) {
 					development: isEnvDevelopment,
 					// Will use the native built-in instead of trying to polyfill
 					// behavior for any plugins that require one.
-					useBuiltIns: true
-				}
-			]
+					useBuiltIns: true,
+				},
+			],
 		].filter(Boolean),
 		plugins: [
 			[
 				require('@babel/plugin-transform-runtime').default,
 				{
-					corejs: false
-				}
+					corejs: false,
+				},
 			],
 			// Necessary to include regardless of the environment because
 			// in practice some other transforms (such as object-rest-spread)
@@ -83,23 +83,23 @@ module.exports = function(api, opts, env) {
 						'useImperativeHandle',
 						'useLayoutEffect',
 						'useDebugValue',
-					]
-				}
+					],
+				},
 			],
 			// must be above class properties
 			[
 				require('@babel/plugin-proposal-decorators'), // stage 2
 				{
-					legacy: true
-				}
+					legacy: true,
+				},
 			],
 			// Enable loose mode to use assignment instead of defineProperty
 			// See discussion in https://github.com/facebook/create-react-app/issues/4263
 			[
 				require('@babel/plugin-proposal-class-properties').default,
 				{
-					loose: true
-				}
+					loose: true,
+				},
 			],
 			// The following two plugins use Object.assign directly, instead of Babel's
 			// extends helper. Note that this assumes `Object.assign` is available.
@@ -107,8 +107,8 @@ module.exports = function(api, opts, env) {
 			[
 				require('@babel/plugin-proposal-object-rest-spread').default,
 				{
-					useBuiltIns: true
-				}
+					useBuiltIns: true,
+				},
 			],
 			require('@babel/plugin-syntax-dynamic-import'), // stage 3
 			require('@babel/plugin-syntax-import-meta'), // stage 3
@@ -125,8 +125,8 @@ module.exports = function(api, opts, env) {
 				// Remove PropTypes from production build
 				require('babel-plugin-transform-react-remove-prop-types').default,
 				{
-					removeImport: true
-				}
+					removeImport: true,
+				},
 			],
 			// required for plugin-transform-regenerator to handle for-of inside generators
 			require('@babel/plugin-transform-for-of'),
@@ -135,8 +135,8 @@ module.exports = function(api, opts, env) {
 				require('@babel/plugin-transform-regenerator').default,
 				{
 					// Async functions are converted to generators by @babel/preset-env
-					async: false
-				}
+					async: false,
+				},
 			],
 			isEnvTest &&
 				// Transform dynamic import to require
@@ -148,7 +148,7 @@ module.exports = function(api, opts, env) {
 				//   const registerRequireContextHook = require('babel-plugin-require-context-hook/register')
 				//   registerRequireContextHook()
 				//
-				require('babel-plugin-require-context-hook').default
-		].filter(Boolean)
+				require('babel-plugin-require-context-hook').default,
+		].filter(Boolean),
 	}
 }

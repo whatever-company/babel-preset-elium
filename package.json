@@ -46,7 +46,7 @@
     "babel-plugin-transform-react-remove-prop-types": "0.4.24"
   },
   "devDependencies": {
-    "prettier": "^1.17.0",
+    "prettier": "^1.19.1",
     "prettier-cli": "^0.1.0",
     "standard-version": "^6.0.1"
   },
