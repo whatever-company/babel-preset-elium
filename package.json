@@ -48,7 +48,7 @@
   "devDependencies": {
     "prettier": "^1.19.1",
     "prettier-cli": "^0.1.0",
-    "standard-version": "^6.0.1"
+    "standard-version": "^7.0.1"
   },
   "peerDependencies": {
     "core-js": "^3.0.0"
