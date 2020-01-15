@@ -1,0 +1,9 @@
+{
+	"extends": ["gitlab>elium/infra/renovate-config"],
+	"packageRules": [
+		{
+			"packagePatterns": ["^@babel"],
+			"groupName": "Babel packages"
+		}
+	]
+}
