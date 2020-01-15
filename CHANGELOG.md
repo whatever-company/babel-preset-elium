@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.1](https://gitlab.com/elium/product/babel-preset-elium/compare/v0.6.0...v0.7.1) (2020-01-15)
+
+
+### Features
+
+* add support for trailing commas ([d30c8bd](https://gitlab.com/elium/product/babel-preset-elium/commit/d30c8bddbbdc12c0fe218b50726d484d0c512af2))
+
+
+### Bug Fixes
+
+* **deps:** pin dependencies ([e9ea903](https://gitlab.com/elium/product/babel-preset-elium/commit/e9ea9033bb6aeacc903c6ee77528af067eb227e8))
+* **deps:** update babel packages to v7.8.3 ([db00f85](https://gitlab.com/elium/product/babel-preset-elium/commit/db00f85a483092dca613d66980b6346342cda7c1))
+
 ## [0.7.0](https://gitlab.com/elium/product/babel-preset-elium/compare/v0.6.0...v0.7.0) (2019-12-19)
 
 
