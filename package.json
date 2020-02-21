@@ -1,10 +1,10 @@
 {
-  "name": "@eliumhq/babel-preset-elium",
+  "name": "@whatever-company/babel-preset-elium",
   "version": "0.7.2",
   "description": "Babel preset used by Elium",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com:elium/product/babel-preset-elium.git"
+    "url": "git@github.com:whatever-company/babel-preset-elium.git"
   },
   "license": "MIT",
   "files": [
@@ -17,6 +17,9 @@
   "scripts": {
     "format": "prettier --write '**/*.{js,jsx,md,json,css}'",
     "release": "standard-version"
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com/"
   },
   "dependencies": {
     "@babel/core": "7.8.4",
