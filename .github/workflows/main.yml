@@ -12,6 +12,8 @@ jobs:
         name: Use Node.js 13.x
         with:
           node-version: '13.x'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@whatever-company'
       - uses: actions/cache@v1
         name: Restore node_modules cache
         id: node_modules
@@ -23,5 +25,7 @@ jobs:
       - run: yarn install --frozen-lockfile
         if: steps.node_modules.outputs.cache-hit != 'true'
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
