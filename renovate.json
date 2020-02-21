@@ -1,9 +1,8 @@
 {
-	"extends": ["gitlab>elium/infra/renovate-config"],
-	"packageRules": [
-		{
-			"packagePatterns": ["^@babel"],
-			"groupName": "Babel packages"
-		}
-	]
+	"extends": ["github>whatever-company/renovate-config"],
+	"packageRules": [{
+		"packagePatterns": ["^@babel"],
+		"groupName": "Babel packages"
+	}],
+	"prConcurrentLimit": 2
 }
