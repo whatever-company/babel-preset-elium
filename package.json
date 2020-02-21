@@ -1,6 +1,6 @@
 {
   "name": "@whatever-company/babel-preset-elium",
-  "version": "0.7.2",
+  "version": "1.0.0",
   "description": "Babel preset used by Elium",
   "repository": {
     "type": "git",
@@ -19,7 +19,7 @@
     "release": "standard-version"
   },
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
     "@babel/core": "7.8.4",
