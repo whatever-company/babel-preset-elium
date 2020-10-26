@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/whatever-company/babel-preset-elium/compare/v1.0.0...v2.0.0) (2020-10-26)
+
+
+### Bug Fixes
+
+* **deps:** update babel packages to v7.8.6 ([be52839](https://github.com/whatever-company/babel-preset-elium/commit/be52839fa145bcafff3ac26a3299ca369b13c221))
+
 ## [1.0.0](https://github.com/whatever-company/babel-preset-elium/compare/v0.6.0...v1.0.0) (2020-02-21)
 
 
