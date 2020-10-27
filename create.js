@@ -47,6 +47,8 @@ module.exports = function(api, opts, env) {
 			[
 				require('@babel/preset-react').default,
 				{
+					// Runtime to use for JSX transforms
+					runtime: opts.react && opts.react.runtime || "classic",
 					// Adds component stack to warning messages
 					// Adds __self attribute to JSX which React will use for some warnings
 					development: isEnvDevelopment,
