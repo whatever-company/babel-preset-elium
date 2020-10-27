@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.3](https://github.com/whatever-company/babel-preset-elium/compare/v2.0.2...v2.0.3) (2020-10-27)
+
+
+### Features
+
+* add configuration for jsx runtime method ([7abfade](https://github.com/whatever-company/babel-preset-elium/commit/7abfade4452b8af86f2b20b61f929b322da3a69c))
+
 ### [2.0.2](https://github.com/whatever-company/babel-preset-elium/compare/v2.0.1...v2.0.2) (2020-10-26)
 
 ### [2.0.1](https://github.com/whatever-company/babel-preset-elium/compare/v2.0.0...v2.0.1) (2020-10-26)

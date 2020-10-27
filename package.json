@@ -1,6 +1,6 @@
 {
   "name": "@whatever-company/babel-preset-elium",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Babel preset used by Elium",
   "repository": {
     "type": "git",
