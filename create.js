@@ -36,8 +36,8 @@ module.exports = function(api, opts, env) {
 					// Allow importing core-js in entrypoint and use browserlist to select polyfills
 					useBuiltIns: 'entry',
 					corejs: 3,
-					// Do not transform modules to CJS by defaylt
-					modules: opts.modules || false,
+					// Do not transform modules to CJS by default
+					modules: opts.modules || 'auto',
 					targets: opts.targets,
 					// Exclude transforms that make all code slower
 					// https://github.com/facebook/create-react-app/pull/5278
@@ -121,7 +121,6 @@ module.exports = function(api, opts, env) {
 			require('@babel/plugin-proposal-throw-expressions'), // stage 2
 			require('@babel/plugin-proposal-nullish-coalescing-operator'), // stage 3
 			require('@babel/plugin-proposal-optional-chaining'), // stage 4
-			// require('@babel/plugin-transform-react-display-name'),
 			isEnvProduction && [
 				// Remove PropTypes from production build
 				require('babel-plugin-transform-react-remove-prop-types').default,
@@ -142,14 +141,6 @@ module.exports = function(api, opts, env) {
 			isEnvTest &&
 				// Transform dynamic import to require
 				require('babel-plugin-transform-dynamic-import').default,
-			isEnvTest &&
-				// Support require.context in tests
-				// You still need to setup the hook when running tests with
-				//
-				//   const registerRequireContextHook = require('babel-plugin-require-context-hook/register')
-				//   registerRequireContextHook()
-				//
-				require('babel-plugin-require-context-hook').default,
 		].filter(Boolean),
 	}
 }
